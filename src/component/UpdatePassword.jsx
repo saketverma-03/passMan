@@ -153,7 +153,7 @@ const UpdatePassword = (props) => {
                 </Button>
               </Link>
               <Button colorScheme={"blue"} onClick={handleSubmit}>
-                Add
+                Update
               </Button>
             </Flex>
           </FormControl>

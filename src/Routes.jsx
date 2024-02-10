@@ -1,9 +1,5 @@
 import React from "react";
-import {
-  Navigate,
-  createBrowserRouter,
-  useLocation
-} from "react-router-dom";
+import { Navigate, createBrowserRouter, useLocation } from "react-router-dom";
 import AddNewPassword from "./component/AddNewPassword";
 import Login from "./component/LoginPage";
 import MainBody from "./component/MainBody";
@@ -22,7 +18,7 @@ const ProtectedRoute = ({ children }) => {
   return children;
 };
 
- const routes = createBrowserRouter([
+const routes = createBrowserRouter([
   {
     path: "/",
     element: (
@@ -38,16 +34,14 @@ const ProtectedRoute = ({ children }) => {
         <MainBody />
       </ProtectedRoute>
     ),
-  }, {
+  },
+  {
     path: "/signup",
-    element: (
-        <Signup />
-    ),
-  }, {
+    element: <Signup />,
+  },
+  {
     path: "/login",
-    element: (
-        <Login />
-    ),
+    element: <Login />,
   },
   {
     path: "/addNewPassword",
@@ -58,7 +52,7 @@ const ProtectedRoute = ({ children }) => {
     ),
   },
   {
-    path: "/update-password/:id",
+    path: "/UpdatePassword",
     element: (
       <ProtectedRoute>
         {" "}

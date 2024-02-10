@@ -102,16 +102,17 @@ const Table_Item = (props) => {
             aria-label="Call Sage"
             fontSize="15px"
             marginLeft="20px"
-            // onClick={() =>
-            //   toast({
-            //     title: 'Copied',
-            //     status: 'info',
-            //     duration: 2000,
-            //     isClosable: true,
-            //     size: 'sm',
-            //   })
-            // }
             icon={<CopyIcon />}
+            onClick={() =>
+              navigator.clipboard.writeText(username) &&
+              toast({
+                title: "Copied",
+                status: "success",
+                duration: 2000,
+                isClosable: true,
+                size: "sm",
+              })
+            }
           />
         </Td>
         <Td isNumeric>
@@ -124,8 +125,16 @@ const Table_Item = (props) => {
             fontSize="15px"
             marginLeft="20px"
             icon={<CopyIcon />}
-            // onClick={() => clipboard.writeText(password)}
-            // onClick = {() => navigator.clipboard.writeText(password)}
+            onClick={() =>
+              navigator.clipboard.writeText(password) &&
+              toast({
+                title: "Copied",
+                status: "success",
+                duration: 2000,
+                isClosable: true,
+                size: "sm",
+              })
+            }
           />
         </Td>
         <Td>
